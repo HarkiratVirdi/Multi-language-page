@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-language</title>
+  </head>
+  <body>
+    <div class="language">
+      <a href="#eng" id="reloading">English</a>
+      <a href="#fr" id="reloading">French</a>
+    </div>
+
+    <h1 id="hi">Hello, I am Harkirat Singh Virdi</h1>
+  </body>
+
+  <script>
+    var dataReload = document.querySelectorAll("#reloading");
+
+    for (let i = 0; i <= dataReload.length; i++) {
+      if (dataReload[i]) {
+        dataReload[i].addEventListener("click", function () {
+          setTimeout(() => {
+            window.location.reload(true);
+          }, 1);
+        });
+      }
+    }
+  </script>
+  <script src="index.fr.js"></script>
+  <script src="index.eng.js"></script>
+</html>
